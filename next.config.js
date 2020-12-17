@@ -1,5 +1,5 @@
-const withCSS = require("@zeit/next-css");
-const pipe = require("lodash/fp/pipe");
+const withCSS = require('@zeit/next-css');
+const pipe = require('lodash/fp/pipe');
 
 module.exports = pipe(withCSS)({
   cssModules: true,
@@ -7,7 +7,7 @@ module.exports = pipe(withCSS)({
     // Load SVGs inline
     config.module.rules.push({
       test: /\.svg$/,
-      use: { loader: "svg-inline-loader", options: {} }
+      use: { loader: 'svg-inline-loader', options: {} }
     });
     return config;
   }
